@@ -1,0 +1,16 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.Footer {
+    @include flex (column);
+    padding: 30px 0;
+    background-color: $black;
+    color: $color-primary;
+    font-size: 24px;
+
+    img {
+        height: 40px;
+        filter: brightness(10);
+        margin: 30px 0;
+    }
+}
