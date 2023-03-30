@@ -1,8 +1,12 @@
+import Banner from '../components/Banner';
+import Card from '../components/Card';
+
 const Home = () => {
     return (
-        <main>
-            <h1>Page d'accueil</h1>
-        </main>
+        <div className="Home">
+            <Banner />
+            <Card />
+        </div>
     )
 }
 

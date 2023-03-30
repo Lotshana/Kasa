@@ -1,0 +1,12 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.Card {
+    @include flex(row, center, center);
+    flex-wrap: wrap;
+    padding: 50px;
+    margin: 40px 100px;
+    gap: 60px;
+    border-radius: 25px;
+    background-color: $color-tertiary;
+}

@@ -1,0 +1,12 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.Banner {
+    @include flex();
+    margin: auto 100px;
+    height: 223px;
+    border-radius: 25px;
+    background-color: $black;
+    /*background-image: url('../../../assets/home_cover.png');*/
+    color: $color-primary;
+}
