@@ -1,8 +1,12 @@
+import Banner from '../components/Banner';
+import Collaps from '../components/Collaps';
+
 const About = () => {
     return (
-        <main>
-            <h1>Page à propos</h1>
-        </main>
+        <div className="Home">
+            <Banner />
+            <Collaps />
+        </div>
     )
 }
 

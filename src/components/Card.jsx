@@ -7,6 +7,7 @@ const Card = () => {
             {dataList.map((data) =>
                 <HousingList
                     key={data.id}
+                    id={data.id}
                     title={data.title}
                     cover={data.cover}
                 />
