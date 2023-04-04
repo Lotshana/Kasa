@@ -41,7 +41,7 @@ a {
   height: 223px;
   border-radius: 25px;
   background-color: #000000;
-  /*background-image: url('../../../assets/home_cover.png');*/
+  /*background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../../assets/home-cover.png');*/
   color: #FFFFFF;
 }
 
