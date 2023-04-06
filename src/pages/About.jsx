@@ -1,11 +1,19 @@
 import Banner from '../components/Banner';
 import Collaps from '../components/Collaps';
 
+import {AboutList} from '../datas/About';
+
 const About = () => {
     return (
-        <div className="Home">
+        <div className="About">
             <Banner />
-            <Collaps />
+            {AboutList.map(({title, content}, index) =>
+                <Collaps
+                    key={`${index}`}
+                    title={title}
+                    content={content}
+                />
+            )}
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import dataList from '../datas/Datas'
-import Carousel from '../components/Carousel';
+//import Carousel from '../components/Carousel';
 
 const Housing = ({title, location, host, rating, tags, description, equipment}) => {
     return (

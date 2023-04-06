@@ -40,8 +40,7 @@ a {
   margin: auto 100px;
   height: 223px;
   border-radius: 25px;
-  background-color: #000000;
-  /*background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../../assets/home-cover.png');*/
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets/home-cover.png");
   color: #FFFFFF;
 }
 
@@ -86,6 +85,8 @@ a {
 }
 
 .collapsible {
+  display: flex;
+  justify-content: space-between;
   background-color: #FF6060;
   color: #FFFFFF;
   cursor: pointer;
@@ -96,30 +97,21 @@ a {
   text-align: left;
   outline: none;
   font-size: 24px;
-  /*.active:after {
-    content: "\2212";
-  }*/
-}
-.collapsible .active, .collapsible .collapsible:hover {
-  background-color: #555;
-}
-.collapsible :after {
-  /*content: '\002B';*/
-  color: white;
-  float: right;
-  margin-left: 5px;
 }
 
 .content {
-  display: none;
-  overflow: hidden;
-}
-
-.contentnot-display {
   padding: 20px;
   background-color: #F7F7F7;
   color: #FF6060;
   border-radius: 0 0 5px 5px;
+}
+
+.not-display {
+  display: none;
+}
+
+.icon-rotate {
+  transform: rotate(180deg);
 }
 
 .Error404 {
