@@ -1,6 +1,6 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
 
-const Collaps = (title, content) => {
+const Collaps = ({title, content}) => {
 
     const [isOpen, setIsOpen] = useState(false);
     const clickCollaps = () => {setIsOpen((isOpen) => !isOpen)};
