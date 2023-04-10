@@ -1,4 +1,4 @@
-body, a, p, h1, h2, h3 {
+body, a, p, h1, h2, h3, ul {
   margin: 0 auto;
   padding: 0;
   font-family: "Montserrat", sans-serif;
@@ -40,7 +40,7 @@ a {
   margin: auto 100px;
   height: 223px;
   border-radius: 25px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets/home-cover.png");
+  background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0)), url("../assets/home-cover.png");
   color: #FFFFFF;
 }
 
@@ -54,7 +54,6 @@ a {
   margin: 40px 100px;
   gap: 50px;
   border-radius: 25px;
-  background-color: #F7F7F7;
 }
 
 .HousingCard {
@@ -112,6 +111,46 @@ a {
 
 .icon-rotate {
   transform: rotate(180deg);
+}
+
+.Housing {
+  margin: auto 100px;
+}
+
+.Carousel {
+  height: 415px;
+  border-radius: 25px;
+  background-color: black;
+}
+
+.Infos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px auto;
+}
+
+.Profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.Profile img {
+  width: 65px;
+  height: 65px;
+  margin-left: 10px;
+  border-radius: 50px;
+}
+
+.Description {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .Error404 {

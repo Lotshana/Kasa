@@ -1,0 +1,34 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.Housing {
+    margin: auto 100px;
+}
+
+.Carousel {
+    height: 415px;
+    border-radius: 25px;
+    background-color: black;
+}
+
+.Infos {
+    @include flex(row, center, center);
+    justify-content: space-between;
+    margin: 30px auto;
+}
+
+.Profile {
+    @include flex(row, center, center);
+
+    img {
+        width: 65px;
+        height: 65px;
+        margin-left: 10px;
+        border-radius: 50px;
+    }
+}
+
+.Description {
+    @include flex(row, center, center);
+    justify-content: space-between;
+}
