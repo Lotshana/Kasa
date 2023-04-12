@@ -12,6 +12,11 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-size: 35px;
+  font-weight: 400;
+}
+
 .Navigation {
   display: flex;
   flex-direction: row;
@@ -132,7 +137,11 @@ a {
   justify-content: center;
   align-items: center;
   justify-content: space-between;
-  margin: 30px auto;
+  margin: 30px 0 10px 0;
+}
+.Infos p {
+  color: #FF6060;
+  font-size: 18px;
 }
 
 .InfosHouse {
@@ -156,7 +165,19 @@ a {
 }
 
 .TagNotes ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: left;
+  margin: 0;
   padding: 0;
+}
+.TagNotes li {
+  margin: 0 10px 0 0;
+  padding: 5px 40px;
+  color: #FFFFFF;
+  background-color: #FF6060;
+  border-radius: 10px;
 }
 
 .Description {
