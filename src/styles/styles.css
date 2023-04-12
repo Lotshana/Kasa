@@ -1,4 +1,4 @@
-body, a, p, h1, h2, h3, ul {
+body, a, p, h1, h2, h3 {
   margin: 0 auto;
   padding: 0;
   font-family: "Montserrat", sans-serif;
@@ -132,16 +132,30 @@ a {
   margin: 30px auto;
 }
 
-/*.Profile {
-    @include flex(row, center, center);
+.InfosHouse {
+  color: #FF6060;
+}
+.InfosHouse p {
+  margin: 10px 0;
+}
 
-    img {
-        width: 65px;
-        height: 65px;
-        margin-left: 10px;
-        border-radius: 50px;
-    }
-}*/
+.Profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.Profile img {
+  width: 65px;
+  height: 65px;
+  margin-left: 10px;
+  border-radius: 50px;
+}
+
+.TagNotes ul {
+  padding: 0;
+}
+
 .Description {
   display: flex;
   flex-direction: row;

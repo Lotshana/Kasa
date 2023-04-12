@@ -17,7 +17,15 @@
     margin: 30px auto;
 }
 
-/*.Profile {
+.InfosHouse {
+    color: $color-secondary;
+
+    p {
+        margin: 10px 0;
+    }
+}
+
+.Profile {
     @include flex(row, center, center);
 
     img {
@@ -26,7 +34,13 @@
         margin-left: 10px;
         border-radius: 50px;
     }
-}*/
+}
+
+.TagNotes {
+    ul {
+        padding: 0;
+    }
+}
 
 .Description {
     @include flex(row, center, center);
