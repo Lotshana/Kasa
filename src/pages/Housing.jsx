@@ -1,24 +1,21 @@
-//import dataList from '../datas/Datas'
-//import Carousel from '../components/Carousel';
-import Collaps from '../components/Collaps';
+import dataList from '../datas/Datas'
+import Carousel from '../components/Carousel';
+import CollapsHousing from '../components/CollapsHousing';
 
-const Housing = ({title, location, host, rating, tags, description, equipments}) => {
+const Housing = ({id, title, location, host, rating, tags, description, equipments}) => {
     return (
         <section className="Housing">
+            <div className="Carousel">
+                <Carousel />
+            </div>
             {/* {dataList.map((carousel) =>
-                <Carousel
-                    key={carousel.id}
-                    id={carousel.id}
-                    pictures={carousel.pictures}
-                />
-            )} */}
+            )} }
             {/*dataList.map((housing) =>
                 <div className="HousingInfos">
                     <h3>{housing.title}</h3>
                     <p>{housing.location}</p>
                 </div>
             )*/}
-            <div className="Carousel"></div>
 
             <div className="Infos">
                 <div className="InfosHouse">
@@ -38,23 +35,14 @@ const Housing = ({title, location, host, rating, tags, description, equipments})
                 </ul>
             </div>
 
-            <div className="Description">
-                <Collaps />
-                <Collaps />
-                {/*dataList.map(({title, content}, index) =>
-                    <Collaps
-                        key={`${index}`}
-                        title={title}
-                        content={content}
-                    />
-                )*/}
-                {/*dataList.map(({title, content}, index) =>
-                    <Collaps
-                        key={`${index}`}
-                        title={title}
-                        equipments={equipments}
-                    />
-                )*/}
+            <div className="MoreInfos">
+            {dataList.map(({id, equipments}, index) =>
+                <CollapsHousing
+                    key={`${index}`}
+                    id={id}
+                    equipments={equipments}
+                />
+            )}
             </div>
         </section>
     )
