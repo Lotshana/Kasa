@@ -1,4 +1,4 @@
-import dataList from '../datas/Datas'
+//import dataList from '../datas/Datas'
 //import Carousel from '../components/Carousel';
 import Collaps from '../components/Collaps';
 
@@ -21,16 +21,16 @@ const Housing = ({title, location, host, rating, tags, description, equipments})
             <div className="Carousel"></div>
 
             <div className="Infos">
-                <div>
-                    <h1>Cozy loft on the Canal</h1>
+                <div className="InfosHouse">
+                    <h1>Cozy loft on the Canal Saint-Martin</h1>
                     <p>Paris, Île-de-France</p>
                 </div>
                 <div className="Profile">
                     <p>Alexandre Dumas</p>
-                    <img src="../assets/profile.jpg" alt="Photo de profil" />
+                    <img src="../assets/profile.jpg" alt="Profil user" />
                 </div>
             </div>
-            <div>
+            <div className="TagNotes">
                 <ul>
                     <li>Cozy</li>
                     <li>Canal</li>
