@@ -132,19 +132,16 @@ a {
   margin: 30px auto;
 }
 
-.Profile {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.Profile img {
-  width: 65px;
-  height: 65px;
-  margin-left: 10px;
-  border-radius: 50px;
-}
+/*.Profile {
+    @include flex(row, center, center);
 
+    img {
+        width: 65px;
+        height: 65px;
+        margin-left: 10px;
+        border-radius: 50px;
+    }
+}*/
 .Description {
   display: flex;
   flex-direction: row;
