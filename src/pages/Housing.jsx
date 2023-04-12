@@ -35,11 +35,12 @@ const Housing = ({id, title, location, host, rating, tags, description, equipmen
                 </ul>
             </div>
 
-            <div className="MoreInfos">
-            {dataList.map(({id, equipments}, index) =>
+            <div>
+            {dataList.map(({id, description, equipments}, index) =>
                 <CollapsHousing
                     key={`${index}`}
                     id={id}
+                    description={description}
                     equipments={equipments}
                 />
             )}

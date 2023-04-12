@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-const CollapsHousing = ({id, equipments}) => {
+const CollapsHousing = ({id, description, equipments}) => {
 
     const [isOpen, setIsOpen] = useState(false);
     const clickCollaps = () => {setIsOpen((isOpen) => !isOpen)};
@@ -11,10 +11,18 @@ const CollapsHousing = ({id, equipments}) => {
     };
 
     return (
-        <section className="HousingCollaps">
-            <button type="button" className={className.button} onClick={() => {clickCollaps()}}>Équipements <i className={className.myicon}></i></button>
-            <div className={className.content}>
-                <p>{equipments}</p>
+        <section className="MoreInfos">
+            <div className="HousingCollaps">
+                <button type="button" className={className.button} onClick={() => {clickCollaps()}}>Description <i className={className.myicon}></i></button>
+                <div className={className.content}>
+                    <p>{description}</p>
+                </div>
+            </div>
+            <div className="HousingCollaps">
+                <button type="button" className={className.button} onClick={() => {clickCollaps()}}>Équipements <i className={className.myicon}></i></button>
+                <div className={className.content}>
+                    <p>{equipments}</p>
+                </div>
             </div>
         </section>
     )
