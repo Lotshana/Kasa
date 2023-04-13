@@ -45,7 +45,9 @@ h1 {
   margin: auto 100px;
   height: 223px;
   border-radius: 25px;
-  background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0)), url("../assets/home-cover.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/home-cover.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #FFFFFF;
 }
 

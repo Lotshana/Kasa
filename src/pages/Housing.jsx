@@ -1,26 +1,47 @@
 import dataList from '../datas/Datas'
+import { React, useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import Carousel from '../components/Carousel';
 import CollapsHousing from '../components/CollapsHousing';
 
-const Housing = ({id, title, location, host, rating, tags, description, equipments}) => {
+const Housing = () => {
+    const [house, setHouse] = useState({});
+    const params = useParams();
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        fetch('../../datas/Housing.json'
+        ,{
+            headers : { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
+        })
+        .then(function(response){          
+            return response.json();
+        })
+        .then(function(housing) {          
+            if (housing.find((log) => log.id === params.id)) {
+                setHouse(housing.find((log) => log.id === params.id)) 
+                console.log(house)                   
+            }
+            else {
+                navigate("/404");
+            }   
+        })
+}, [navigate, params.id]);
+
     return (
+        house.id && (
         <section className="Housing">
             <div className="Carousel">
                 <Carousel />
             </div>
-            {/* {dataList.map((carousel) =>
-            )} }
-            {/*dataList.map((housing) =>
-                <div className="HousingInfos">
-                    <h3>{housing.title}</h3>
-                    <p>{housing.location}</p>
-                </div>
-            )*/}
 
             <div className="Infos">
                 <div className="InfosHouse">
-                    <h1>Cozy loft on the Canal Saint-Martin</h1>
-                    <p>Paris, Île-de-France</p>
+                    <h1>{house.title}</h1>
+                    <p>{house.location}</p>
                 </div>
                 <div className="Profile">
                     <p>Alexandre Dumas</p>
@@ -43,9 +64,10 @@ const Housing = ({id, title, location, host, rating, tags, description, equipmen
                     description={description}
                     equipments={equipments}
                 />
-            )}
+        )}
             </div>
         </section>
+        )
     )
 }
 
