@@ -1,10 +1,11 @@
-//import { useState } from 'react'
+import { useState } from 'react'
 //import dataList from '../datas/Datas'
 
-const Carousel = ({pictures}) => {
-    /*const [currentIndexm setCurrentUser] = useState(0);*/
+const Carousel = ({slides}) => {
+    const [currentIndex, setCurrentUser] = useState(0);
     return (
         <div>
+            <div className="CarouselImg"></div>
         </div>
     )
 }

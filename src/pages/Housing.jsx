@@ -8,6 +8,12 @@ const Housing = () => {
     const [house, setHouse] = useState({});
     const params = useParams();
     const navigate = useNavigate();
+    const tags = house.tags;
+    // const listTags = tags.map((tag) =>
+    //     <li>{tag}</li>
+    // );
+
+    const slides = [{url: '../../working_girl.jpeg', title: "working girl"}];
 
     useEffect(() => {
         fetch('../../datas/Housing.json'
@@ -23,7 +29,7 @@ const Housing = () => {
         .then(function(housing) {          
             if (housing.find((log) => log.id === params.id)) {
                 setHouse(housing.find((log) => log.id === params.id)) 
-                console.log(house)                   
+                // console.log(house)                   
             }
             else {
                 navigate("/404");
@@ -35,7 +41,7 @@ const Housing = () => {
         house.id && (
         <section className="Housing">
             <div className="Carousel">
-                <Carousel />
+                <Carousel slides={slides} />
             </div>
 
             <div className="Infos">
@@ -44,15 +50,14 @@ const Housing = () => {
                     <p>{house.location}</p>
                 </div>
                 <div className="Profile">
-                    <p>Alexandre Dumas</p>
-                    <img src="../assets/profile.jpg" alt="Profil user" />
+                    <p>{house.host.name}</p>
+                    <img src="{house.host.picture}" alt="Profil user" />
                 </div>
             </div>
+
             <div className="TagNotes">
                 <ul>
-                    <li>Cozy</li>
-                    <li>Canal</li>
-                    <li>Paris 10</li>
+                    <li>{tags}</li>
                 </ul>
             </div>
 
