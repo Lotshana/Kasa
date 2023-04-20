@@ -13,7 +13,11 @@ const Housing = () => {
     //     <li>{tag}</li>
     // );
 
-    const slides = [{url: '../../working_girl.jpeg', title: "working girl"}];
+    const slides = [
+        {url: '../assets/mitsuri.jpg', title: "Mitsuri"},
+        {url: '../assets/working_girl.jpeg', title: "Working Girl"},
+        {url: '../assets/demslayer.jpg', title: "Demon Slayer"},
+    ];
 
     useEffect(() => {
         fetch('../../datas/Housing.json'
