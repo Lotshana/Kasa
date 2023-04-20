@@ -1,11 +1,14 @@
 import { useState } from 'react'
-//import dataList from '../datas/Datas'
 
 const Carousel = ({slides}) => {
     const [currentIndex, setCurrentUser] = useState(0);
     return (
-        <div>
-            <div className="CarouselImg"></div>
+        <div className="CarouselImg">
+            <div>
+                <i class="fa-sharp fa-regular fa-chevron-left"></i>
+                <i class="fa-sharp fa-regular fa-chevron-right"></i>
+            </div>
+            <div className="Images"></div>
         </div>
     )
 }

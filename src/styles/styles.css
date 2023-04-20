@@ -127,14 +127,6 @@ h1 {
   margin: auto 100px;
 }
 
-.Carousel {
-  width: 100%;
-  height: 415px;
-  margin: 0 auto;
-  border-radius: 25px;
-  background-color: black;
-}
-
 .Infos {
   display: flex;
   flex-direction: row;
@@ -194,6 +186,37 @@ h1 {
 .MoreInfos .HousingCollaps {
   margin: 20px 0;
   width: 45%;
+}
+
+.Carousel {
+  width: 100%;
+  height: 415px;
+  margin: 0 auto;
+}
+
+.CarouselImg {
+  height: 100%;
+  position: relative;
+}
+.CarouselImg .fa-chevron-left {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  cursor: pointer;
+}
+.CarouselImg .fa-chevron-right {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  cursor: pointer;
+}
+.CarouselImg .Images {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  background-image: url("../assets/working_girl.jpeg");
+  background-size: cover;
+  background-position: center;
 }
 
 .Error404 {
