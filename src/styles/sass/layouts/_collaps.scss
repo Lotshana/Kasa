@@ -1,8 +1,13 @@
 @import '../utils/mixins';
 @import '../utils/variables';
 
+.Collaps {
+    margin-bottom: 20px;
+}
+
 .AboutCollaps {
-    margin: 40px 200px;
+    margin-top: 20px;
+    padding: 10px 120px;
 }
 
 .collapsible {
@@ -21,10 +26,12 @@
 }
 
 .content {
+    margin: 0;
     padding: 20px;
     background-color: $color-tertiary;
     color: $color-secondary;
     border-radius: 0 0 5px 5px;
+    line-height: 25px;
 }
   
 .not-display {

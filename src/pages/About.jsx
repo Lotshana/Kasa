@@ -7,13 +7,15 @@ const About = () => {
     return (
         <div className="About">
             <Banner />
-            {AboutList.map(({title, content}, index) =>
-                <Collaps
-                    key={`${index}`}
-                    title={title}
-                    content={content}
-                />
-            )}
+            <div className="AboutCollaps">
+                {AboutList.map(({title, content}, index) =>
+                    <Collaps
+                        key={`${index}`}
+                        title={title}
+                        content={content}
+                    />
+                )}
+            </div>
         </div>
     )
 }

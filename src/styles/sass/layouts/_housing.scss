@@ -54,9 +54,10 @@
 .MoreInfos {
     @include flex(row, left, left);
     justify-content: space-between;
+    margin-top: 20px;
 
-    .HousingCollaps {
-        margin: 20px 0;
-        width: 45%;
+    > div {
+        flex: 1;
+        max-width: 45%;
     }
 }

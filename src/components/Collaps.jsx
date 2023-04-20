@@ -11,12 +11,17 @@ const Collaps = ({title, content}) => {
     };
 
     return (
-        <section className="AboutCollaps">
+        <div className="Collaps">
             <button type="button" className={className.button} onClick={() => {clickCollaps()}}>{title} <i className={className.myicon}></i></button>
-            <div className={className.content}>
-                <p>{content}</p>
-            </div>
-        </section>
+            {
+                Array.isArray(content) ?
+                <ul className={className.content}>
+                    {content.map((item, i) =>  <li key={`${i}`}>{item}</li>)}
+                </ul>
+                :
+                <p className={className.content}>{content}</p>
+            }
+        </div>
     )
 }
 

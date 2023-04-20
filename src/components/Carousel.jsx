@@ -1,23 +1,34 @@
-import { useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 
 const Carousel = ({ slides }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const goPrevious = () => {
-        const isFirstSlide = currentIndex === 0
-        const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-        setCurrentIndex(newIndex);
+    const ref = useRef(null);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const setBackground = () => {
+        const element = ref.current;
+        element.style.backgroundImage = `url('${slides[currentIndex]}')`;
     };
+
+    useEffect(() => {
+        setBackground();
+    }, [setBackground]);
+
+    const goPrevious = () => {
+        setCurrentIndex(currentIndex === 0 ? slides.length - 1 : currentIndex - 1);
+        setBackground();
+    };
+
     const goNext = () => {
-        const isLastSlide = currentIndex === slides.length - 1
-        const newIndex = isLastSlide ? 0 : currentIndex + 1;
-        setCurrentIndex(newIndex);
+        setCurrentIndex(currentIndex === slides.length - 1 ? 0 : currentIndex + 1);
+        setBackground();
     };
 
     return (
         <div className="CarouselImg">
-            <div onClick={goPrevious}><i class="fa-sharp fa-regular fa-chevron-left"></i></div>
-            <div onClick={goNext}><i class="fa-sharp fa-regular fa-chevron-right"></i></div>
-            <div className="Images"></div>
+            <div onClick={goPrevious}><i className="fa-solid fa-chevron-up left"></i></div>
+            <div onClick={goNext}><i className="fa-solid fa-chevron-up right"></i></div>
+            <div ref={ref} className="Images"></div>
         </div>
     )
 }

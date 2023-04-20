@@ -1,23 +1,15 @@
-import dataList from '../datas/Datas'
+// import dataList from '../datas/Datas'
 import { React, useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Carousel from '../components/Carousel';
-import CollapsHousing from '../components/CollapsHousing';
+import Collaps from '../components/Collaps';
 
 const Housing = () => {
     const [house, setHouse] = useState({});
     const params = useParams();
     const navigate = useNavigate();
-    const tags = house.tags;
-    // const listTags = tags.map((tag) =>
-    //     <li>{tag}</li>
-    // );
 
-    const slides = [
-        {url: '../assets/mitsuri.jpg', title: "Mitsuri"},
-        {url: '../assets/working_girl.jpeg', title: "Working Girl"},
-        {url: '../assets/demslayer.jpg', title: "Demon Slayer"},
-    ];
+    // const slides = [{url: '../assets/working_girl.jpeg', title: "Working Girl"}];
 
     useEffect(() => {
         fetch('../../datas/Housing.json'
@@ -45,7 +37,7 @@ const Housing = () => {
         house.id && (
         <section className="Housing">
             <div className="Carousel">
-                <Carousel slides={slides} />
+                <Carousel slides={house.pictures} />
             </div>
 
             <div className="Infos">
@@ -55,25 +47,27 @@ const Housing = () => {
                 </div>
                 <div className="Profile">
                     <p>{house.host.name}</p>
-                    <img src="{house.host.picture}" alt="Profil user" />
+                    <img src={house.host.picture} alt="Profil user" />
                 </div>
             </div>
 
             <div className="TagNotes">
                 <ul>
-                    <li>{tags}</li>
+                    {
+                        house.tags.map((tag, i) =>  <li key={`${i}`}>{tag}</li>)
+                    }
                 </ul>
             </div>
 
-            <div>
-            {dataList.map(({id, description, equipments}, index) =>
-                <CollapsHousing
-                    key={`${index}`}
-                    id={id}
-                    description={description}
-                    equipments={equipments}
+            <div className="MoreInfos">
+                <Collaps
+                    title="Description"
+                    content={house.description}
                 />
-        )}
+                <Collaps
+                    title="Equipements"
+                    content={house.equipments}
+                />
             </div>
         </section>
         )
