@@ -2,6 +2,7 @@
 import { React, useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Carousel from '../components/Carousel';
+import Stars from '../components/Rating';
 import Collaps from '../components/Collaps';
 
 const Housing = () => {
@@ -57,6 +58,7 @@ const Housing = () => {
                         house.tags.map((tag, i) =>  <li key={`${i}`}>{tag}</li>)
                     }
                 </ul>
+                <Stars />
             </div>
 
             <div className="MoreInfos">

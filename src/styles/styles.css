@@ -167,6 +167,13 @@ h1 {
   border-radius: 50px;
 }
 
+.TagNotes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
 .TagNotes ul {
   display: flex;
   flex-direction: row;
@@ -181,6 +188,10 @@ h1 {
   color: #FFFFFF;
   background-color: #FF6060;
   border-radius: 10px;
+}
+.TagNotes .star-svg {
+  margin: 0 0 0 10px;
+  width: 30px;
 }
 
 .MoreInfos {

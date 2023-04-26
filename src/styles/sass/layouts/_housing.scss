@@ -36,6 +36,9 @@
 }
 
 .TagNotes {
+    @include flex(row);
+    justify-content: space-between;
+
     ul {
         @include flex(row, left, left);
         margin: 0;
@@ -48,6 +51,11 @@
         color: $color-primary;
         background-color: $color-secondary;
         border-radius: 10px;
+    }
+
+    .star-svg {
+        margin: 0 0 0 10px;
+        width: 30px;
     }
 }
 
