@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Rating } from 'react-simple-star-rating'
 
-const Stars = () => {
+const Stars = ({ note }) => {
     const [rating, setRating] = useState(0);
 
     const handleRating = (rate) => {
@@ -13,6 +13,7 @@ const Stars = () => {
           <Rating
             onClick={handleRating}
             ratingValue={rating}
+            fillColor='#FF6060'
             /* Available Props */
           />
         </div>

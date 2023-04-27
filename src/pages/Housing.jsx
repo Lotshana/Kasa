@@ -10,8 +10,6 @@ const Housing = () => {
     const params = useParams();
     const navigate = useNavigate();
 
-    // const slides = [{url: '../assets/working_girl.jpeg', title: "Working Girl"}];
-
     useEffect(() => {
         fetch('../../datas/Housing.json'
         ,{
