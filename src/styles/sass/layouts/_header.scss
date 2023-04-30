@@ -17,6 +17,27 @@
 
         a {
             color: $color-secondary;
+            text-decoration: none;
+
+            :active {
+                text-decoration: underline;
+            }
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .Navigation {
+      margin: 20px;
+      font-size: 16px;
+
+      img {
+        height: 35px;
+      }
+
+      ul {
+        gap: 20px;
+        text-transform: uppercase;
+      }
+    }
+  }

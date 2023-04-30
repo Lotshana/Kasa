@@ -8,10 +8,6 @@ li {
   list-style: none;
 }
 
-a {
-  text-decoration: none;
-}
-
 h1 {
   font-size: 35px;
   font-weight: 400;
@@ -35,8 +31,25 @@ h1 {
 }
 .Navigation ul a {
   color: #FF6060;
+  text-decoration: none;
+}
+.Navigation ul a :active {
+  text-decoration: underline;
 }
 
+@media screen and (max-width: 768px) {
+  .Navigation {
+    margin: 20px;
+    font-size: 16px;
+  }
+  .Navigation img {
+    height: 35px;
+  }
+  .Navigation ul {
+    gap: 20px;
+    text-transform: uppercase;
+  }
+}
 .Banner {
   display: flex;
   flex-direction: row;
@@ -274,4 +287,10 @@ h1 {
   height: 40px;
   filter: brightness(10);
   margin: 30px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .Footer {
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=styles.css.map */
