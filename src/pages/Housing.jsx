@@ -23,8 +23,7 @@ const Housing = () => {
         })
         .then(function(housing) {          
             if (housing.find((log) => log.id === params.id)) {
-                setHouse(housing.find((log) => log.id === params.id)) 
-                // console.log(house)                   
+                setHouse(housing.find((log) => log.id === params.id))
             }
             else {
                 navigate("/404");

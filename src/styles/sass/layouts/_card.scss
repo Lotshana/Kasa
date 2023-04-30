@@ -4,7 +4,6 @@
 .Card {
     @include flex(row, center, center);
     flex-wrap: wrap;
-    padding: 50px;
     margin: 40px 100px;
     gap: 50px;
     border-radius: 25px;
@@ -16,9 +15,8 @@
 
 @media screen and (max-width: 768px) {
     .Card {
-        @include flex(column, center, center);
-        margin: 0;
-        padding: 20px;
+        @include flex(column);
+        margin: 20px;
         gap: 20px;
         border-radius: 10px;
     }

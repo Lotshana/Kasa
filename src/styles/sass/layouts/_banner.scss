@@ -1,25 +1,44 @@
 @import '../utils/mixins';
 @import '../utils/variables';
 
-.Banner {
+.banner {
     @include flex();
-    margin: auto 100px;
+    margin: 0 100px;
     height: 223px;
     border-radius: 25px;
-    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../assets/home-cover.png');
-    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url('../assets/home-cover.png');
+    background-position: center;
     background-size: cover;
     color: $color-primary;
+
+    &_about{
+        @include flex();
+        margin: 0 100px;
+        height: 223px;
+        border-radius: 25px;
+        background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url('../assets/about-cover.png');
+        background-position: center;
+        background-size: cover;
+    }
+
+    p {
+        font-size: 35px;
+    }
 }
 
 @media screen and (max-width: 768px) {
-    .Banner {
+    .banner {
         @include flex(row, left, left);
         margin: auto 20px;
         height: 150px;
         border-radius: 10px;
 
-        h1 {
+        &_about {
+            margin: auto 20px;
+            border-radius: 10px;
+        }
+
+        p {
             margin: 0 20px;
             width: 200px;
             font-size: 26px;
