@@ -25,6 +25,14 @@
     }
 }
 
+@media screen and (max-width: 992px) {
+    .HousingCard {
+        gap: 20px;
+        width: 46%;
+        height: 300px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .HousingCard {
         width: 100%;

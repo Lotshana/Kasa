@@ -25,16 +25,23 @@
         font-size: 35px;
     }
 }
+@media screen and (max-width: 992px) {
+    .banner {
+        margin: auto 20px;
+
+        &_about {
+            margin: auto 20px;
+        }
+    }
+}
 
 @media screen and (max-width: 768px) {
     .banner {
         @include flex(row, left, left);
-        margin: auto 20px;
         height: 150px;
         border-radius: 10px;
 
         &_about {
-            margin: auto 20px;
             border-radius: 10px;
         }
 

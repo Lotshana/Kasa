@@ -13,6 +13,12 @@
     }
 }
 
+@media screen and (max-width: 992px) {
+    .Card {
+        margin: 20px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .Card {
         @include flex(column);
