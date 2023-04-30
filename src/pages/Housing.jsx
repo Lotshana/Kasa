@@ -40,23 +40,23 @@ const Housing = () => {
             </div>
 
             <div className="Infos">
-                <div className="InfosHouse">
+                <div className="Details">
                     <h1>{house.title}</h1>
                     <p>{house.location}</p>
+                    <ul>
+                        {
+                            house.tags.map((tag, i) =>  <li key={`${i}`}>{tag}</li>)
+                        }
+                    </ul>
                 </div>
-                <div className="Profile">
-                    <p>{house.host.name}</p>
-                    <img src={house.host.picture} alt="Profil user" />
-                </div>
-            </div>
 
-            <div className="TagNotes">
-                <ul>
-                    {
-                        house.tags.map((tag, i) =>  <li key={`${i}`}>{tag}</li>)
-                    }
-                </ul>
-                <Stars />
+                <div className="User">
+                    <div className="Profile">
+                        <p>{house.host.name}</p>
+                        <img src={house.host.picture} alt="Profil user" />
+                    </div>
+                    <Stars />
+                </div>
             </div>
 
             <div className="MoreInfos">

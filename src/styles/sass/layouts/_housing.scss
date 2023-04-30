@@ -8,36 +8,21 @@
 .Infos {
     @include flex(row, center, center);
     justify-content: space-between;
-    margin: 30px 0 10px 0;
+    margin: 30px 0;
+}
+
+.Details {
+    width: 100%;
+
+    h1 {
+        color: $color-secondary;
+    }
 
     p {
+        margin: 10px 0 20px 0;
         color: $color-secondary;
         font-size: 18px;
     }
-}
-
-.InfosHouse {
-    color: $color-secondary;
-
-    p {
-        margin: 10px 0;
-    }
-}
-
-.Profile {
-    @include flex(row, center, center);
-
-    img {
-        width: 65px;
-        height: 65px;
-        margin-left: 10px;
-        border-radius: 50px;
-    }
-}
-
-.TagNotes {
-    @include flex(row);
-    justify-content: space-between;
 
     ul {
         @include flex(row, left, left);
@@ -52,10 +37,36 @@
         background-color: $color-secondary;
         border-radius: 10px;
     }
+}
+
+.User {
+    @include flex(column, center, flex-end);
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
 
     .star-svg {
-        margin: 0 0 0 10px;
+        margin-left: 10px;
         width: 30px;
+    }
+}
+
+.Profile {
+    @include flex(row, center, center);
+
+    p {
+        width: 100px;
+        text-align: right;
+        color: $color-secondary;
+        font-size: 18px;
+        overflow: hidden;
+    }
+
+    img {
+        width: 65px;
+        height: 65px;
+        margin-left: 10px;
+        border-radius: 50px;
     }
 }
 
@@ -73,6 +84,54 @@
 @media screen and (max-width: 768px) {
     .Housing {
         margin: auto 20px;
+    }
+
+    .Infos {
+        @include flex(column, left, left);
+        margin: 15px 0;
+        gap: 20px;
+    }
+
+    .Details {
+        margin: 0;
+
+        h1 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        li {
+            font-size: 14px;
+            border-radius: 5px;
+        }
+    }
+
+    .User {
+        @include flex(row-reverse, center, center);
+        justify-content: space-between;
+
+        .star-svg {
+            margin-left: 0;
+            margin-right: 10px;
+            width: 20px;
+        }
+    }
+
+    .Profile {
+
+        p {
+            width: 75px;
+            font-size: 14px;
+            overflow: hidden;
+        }
+
+        img {
+            width: 45px;
+            height: 45px;
+        }
     }
 
     .MoreInfos {

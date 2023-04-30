@@ -183,7 +183,7 @@ h1 {
     padding: 10px 20px;
   }
   .collapsible {
-    font-size: 20px;
+    font-size: 18px;
   }
   .content {
     padding: 15px;
@@ -201,18 +201,48 @@ h1 {
   justify-content: center;
   align-items: center;
   justify-content: space-between;
-  margin: 30px 0 10px 0;
+  margin: 30px 0;
 }
-.Infos p {
+
+.Details {
+  width: 100%;
+}
+.Details h1 {
+  color: #FF6060;
+}
+.Details p {
+  margin: 10px 0 20px 0;
   color: #FF6060;
   font-size: 18px;
 }
-
-.InfosHouse {
-  color: #FF6060;
+.Details ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: left;
+  margin: 0;
+  padding: 0;
 }
-.InfosHouse p {
-  margin: 10px 0;
+.Details li {
+  margin: 0 10px 0 0;
+  padding: 5px 40px;
+  color: #FFFFFF;
+  background-color: #FF6060;
+  border-radius: 10px;
+}
+
+.User {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+.User .star-svg {
+  margin-left: 10px;
+  width: 30px;
 }
 
 .Profile {
@@ -221,38 +251,18 @@ h1 {
   justify-content: center;
   align-items: center;
 }
+.Profile p {
+  width: 100px;
+  text-align: right;
+  color: #FF6060;
+  font-size: 18px;
+  overflow: hidden;
+}
 .Profile img {
   width: 65px;
   height: 65px;
   margin-left: 10px;
   border-radius: 50px;
-}
-
-.TagNotes {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-between;
-}
-.TagNotes ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  align-items: left;
-  margin: 0;
-  padding: 0;
-}
-.TagNotes li {
-  margin: 0 10px 0 0;
-  padding: 5px 40px;
-  color: #FFFFFF;
-  background-color: #FF6060;
-  border-radius: 10px;
-}
-.TagNotes .star-svg {
-  margin: 0 0 0 10px;
-  width: 30px;
 }
 
 .MoreInfos {
@@ -271,6 +281,48 @@ h1 {
 @media screen and (max-width: 768px) {
   .Housing {
     margin: auto 20px;
+  }
+  .Infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    margin: 15px 0;
+    gap: 20px;
+  }
+  .Details {
+    margin: 0;
+  }
+  .Details h1 {
+    font-size: 20px;
+  }
+  .Details p {
+    font-size: 14px;
+  }
+  .Details li {
+    font-size: 14px;
+    border-radius: 5px;
+  }
+  .User {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .User .star-svg {
+    margin-left: 0;
+    margin-right: 10px;
+    width: 20px;
+  }
+  .Profile p {
+    width: 75px;
+    font-size: 14px;
+    overflow: hidden;
+  }
+  .Profile img {
+    width: 45px;
+    height: 45px;
   }
   .MoreInfos {
     display: flex;
