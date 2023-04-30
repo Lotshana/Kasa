@@ -69,3 +69,17 @@
         max-width: 45%;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .Housing {
+        margin: auto 20px;
+    }
+
+    .MoreInfos {
+        @include flex(column, left, left);
+
+        > div {
+            max-width: 100%;
+        }
+    }
+}

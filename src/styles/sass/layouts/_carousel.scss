@@ -39,3 +39,23 @@
         background-position: center;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .Carousel {
+        height: 255px;
+    }
+
+    .CarouselImg {
+        .left {
+            font-size: 25px;
+        }
+
+        .right {
+            font-size: 25px;
+        }
+
+        .Images {
+            border-radius: 10px;
+        }
+    }
+}

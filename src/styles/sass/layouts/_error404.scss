@@ -11,12 +11,26 @@
     }
 
     > p {
-        margin-bottom: 100px;
+        margin-bottom: 130px;
         font-size: 30px;
     }
 
     .ErrortoHome {
         color: $color-secondary;
         text-decoration: underline;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Error404 {
+        margin: 50px;
+
+        h1 {
+            font-size: 125px;
+        }
+
+        > p {
+            font-size: 20px;
+        }
     }
 }
