@@ -64,6 +64,23 @@ h1 {
   color: #FFFFFF;
 }
 
+@media screen and (max-width: 768px) {
+  .Banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+    margin: auto 20px;
+    height: 150px;
+    border-radius: 10px;
+  }
+  .Banner h1 {
+    margin: 0 20px;
+    width: 200px;
+    font-size: 26px;
+    overflow: hidden;
+  }
+}
 .Card {
   display: flex;
   flex-direction: row;
@@ -79,6 +96,18 @@ h1 {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
 }
 
+@media screen and (max-width: 768px) {
+  .Card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 10px;
+  }
+}
 .HousingCard {
   position: relative;
   width: 30%;
@@ -102,6 +131,12 @@ h1 {
   color: #FFFFFF;
 }
 
+@media screen and (max-width: 768px) {
+  .HousingCard {
+    width: auto;
+    height: 250px;
+  }
+}
 .Collaps {
   margin-bottom: 20px;
 }

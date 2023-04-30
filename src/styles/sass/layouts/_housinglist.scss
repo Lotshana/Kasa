@@ -24,3 +24,10 @@
         color: $color-primary;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .HousingCard {
+        width: auto;
+        height: 250px;
+    }
+}

@@ -13,3 +13,13 @@
         box-shadow: 0 0 15px rgb(0 0 0 / 0.6);
     }
 }
+
+@media screen and (max-width: 768px) {
+    .Card {
+        @include flex(column, center, center);
+        margin: 0;
+        padding: 20px;
+        gap: 20px;
+        border-radius: 10px;
+    }
+}
