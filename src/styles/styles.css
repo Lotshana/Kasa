@@ -13,6 +13,14 @@ h1 {
   font-weight: 400;
 }
 
+.orange-star {
+  color: #FF6060;
+}
+
+.grey-star {
+  color: #F7F7F7;
+}
+
 .Navigation {
   display: flex;
   flex-direction: row;
@@ -211,6 +219,7 @@ h1 {
   color: #FF6060;
   border-radius: 0 0 5px 5px;
   line-height: 25px;
+  min-height: 200px;
 }
 
 .not-display {
@@ -249,6 +258,7 @@ h1 {
 
 .Details {
   width: 100%;
+  flex: 2;
 }
 .Details h1 {
   color: #FF6060;
@@ -283,6 +293,7 @@ h1 {
   justify-content: space-between;
   gap: 20px;
   width: 100%;
+  flex: 1;
 }
 .User .star-svg {
   margin-left: 10px;
@@ -351,6 +362,7 @@ h1 {
   .Details li {
     font-size: 14px;
     border-radius: 5px;
+    padding: 5px 20px;
   }
   .User {
     display: flex;

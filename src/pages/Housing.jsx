@@ -54,7 +54,7 @@ const Housing = () => {
                         <p>{house.host.name}</p>
                         <img src={house.host.picture} alt="Profil user" />
                     </div>
-                    <Stars />
+                    <Stars note={house.rating} />
                 </div>
             </div>
 

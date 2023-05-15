@@ -1,21 +1,16 @@
-import { useState } from 'react'
-import { Rating } from 'react-simple-star-rating'
-
 const Stars = ({ note }) => {
-    const [rating, setRating] = useState(0);
-
-    const handleRating = (rate) => {
-        setRating(rate)
-    }
+  const Star = [1, 2, 3, 4, 5];
 
     return(
         <div className='Stars'>
-          <Rating
-            onClick={handleRating}
-            ratingValue={rating}
-            fillColor='#FF6060'
-            /* Available Props */
-          />
+          {
+            Star.map((item) =>
+            item <= note ?
+            <i key={`${item}`} className='fa-solid fa-star orange-star'></i>
+            :
+            <i key={`${item}`} className='fa-solid fa-star grey-star'></i>
+            )
+          }
         </div>
     )
 }
