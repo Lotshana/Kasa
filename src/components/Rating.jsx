@@ -6,9 +6,9 @@ const Stars = ({ note }) => {
           {
             Star.map((item) =>
             item <= note ?
-            <i key={`${item}`} className='fa-solid fa-star orange-star'></i>
+            <i key={`${item}`} className='fa-solid fa-star orange-star star'></i>
             :
-            <i key={`${item}`} className='fa-solid fa-star grey-star'></i>
+            <i key={`${item}`} className='fa-solid fa-star grey-star star'></i>
             )
           }
         </div>

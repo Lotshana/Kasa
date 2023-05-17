@@ -13,14 +13,6 @@ h1 {
   font-weight: 400;
 }
 
-.orange-star {
-  color: #FF6060;
-}
-
-.grey-star {
-  color: #F7F7F7;
-}
-
 .Navigation {
   display: flex;
   flex-direction: row;
@@ -295,9 +287,15 @@ h1 {
   width: 100%;
   flex: 1;
 }
-.User .star-svg {
+.User .star {
   margin-left: 10px;
-  width: 30px;
+  font-size: 25px;
+}
+.User .orange-star {
+  color: #FF6060;
+}
+.User .grey-star {
+  color: #F7F7F7;
 }
 
 .Profile {
