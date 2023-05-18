@@ -149,7 +149,7 @@ h1 {
   width: 30%;
   height: 340px;
   border-radius: 10px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
 }
 .HousingCard img {
   width: 100%;
@@ -157,7 +157,7 @@ h1 {
   border-radius: 10px;
   -o-object-fit: cover;
      object-fit: cover;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  opacity: 0.8;
 }
 .HousingCard h3 {
   position: absolute;

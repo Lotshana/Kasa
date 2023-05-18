@@ -9,8 +9,8 @@ const Banner = () => {
         if(location.pathname === '/about') {
             setAboutPage(true)
         };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+        
+    }, [location.pathname])
 
     return (
         <section className={aboutPage ? 'banner_about' : 'banner'}>
