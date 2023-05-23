@@ -19,7 +19,7 @@
             color: $color-secondary;
             text-decoration: none;
 
-            :active {
+            &:active {
                 text-decoration: underline;
             }
         }
