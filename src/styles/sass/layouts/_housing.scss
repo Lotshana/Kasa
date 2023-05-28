@@ -110,7 +110,6 @@
     .Infos {
         @include flex(column, left, left);
         margin: 15px 0;
-        gap: 20px;
     }
 
     .Details {
@@ -135,10 +134,10 @@
         @include flex(row-reverse, center, center);
         justify-content: space-between;
 
-        .star-svg {
+        .star {
             margin-left: 0;
-            margin-right: 10px;
-            width: 20px;
+            margin-right: 8px;
+            font-size: 18px;
         }
     }
 
