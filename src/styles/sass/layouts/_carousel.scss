@@ -38,6 +38,13 @@
         background-size: cover;
         background-position: center;
     }
+
+    .indexImg {
+        position: absolute;
+        bottom: 5%;
+        left: 49%;
+        color: $color-primary;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -57,5 +64,9 @@
         .Images {
             border-radius: 10px;
         }
+    }
+
+    .indexImg {
+        display: none;
     }
 }

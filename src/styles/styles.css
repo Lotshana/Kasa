@@ -428,6 +428,12 @@ h1 {
   background-size: cover;
   background-position: center;
 }
+.CarouselImg .indexImg {
+  position: absolute;
+  bottom: 5%;
+  left: 49%;
+  color: #FFFFFF;
+}
 
 @media screen and (max-width: 768px) {
   .Carousel {
@@ -441,6 +447,9 @@ h1 {
   }
   .CarouselImg .Images {
     border-radius: 10px;
+  }
+  .indexImg {
+    display: none;
   }
 }
 .Error404 {
