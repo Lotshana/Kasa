@@ -1,7 +1,6 @@
 import Banner from '../components/Banner';
 import Collaps from '../components/Collaps';
-
-import {AboutList} from '../datas/About';
+import { AboutList } from '../datas/About';
 
 const About = () => {
     return (
