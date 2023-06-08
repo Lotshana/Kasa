@@ -212,7 +212,6 @@ h1 {
   color: #FF6060;
   border-radius: 0 0 5px 5px;
   line-height: 25px;
-  min-height: 200px;
 }
 
 .not-display {
@@ -331,6 +330,9 @@ h1 {
   flex: 1;
   max-width: 45%;
 }
+.MoreInfos .content {
+  min-height: 150px;
+}
 
 @media screen and (max-width: 992px) {
   .Housing {
@@ -391,6 +393,9 @@ h1 {
   }
   .MoreInfos > div {
     max-width: 100%;
+  }
+  .MoreInfos .content {
+    min-height: auto;
   }
 }
 .Carousel {
