@@ -26,8 +26,14 @@ const Carousel = ({ slides }) => {
 
     return (
         <div className="CarouselImg">
-            <div onClick={goPrevious}><i className="fa-solid fa-chevron-up left"></i></div>
-            <div onClick={goNext}><i className="fa-solid fa-chevron-up right"></i></div>
+            {slides.length !== 1 ?
+                <div>
+                    <div onClick={goPrevious}><i className="fa-solid fa-chevron-up left"></i></div>
+                    <div onClick={goNext}><i className="fa-solid fa-chevron-up right"></i></div>
+                </div>
+                :
+                " "
+            }
             <div ref={ref} className="Images"></div>
             <p className="indexImg">{currentIndex + 1}/{slides.length}</p>
         </div>
