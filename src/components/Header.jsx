@@ -15,8 +15,8 @@ const Header = () => {
         <header className="Navigation">
             <span><NavLink to="/"><img src={logo} alt="Logo Kasa" /></NavLink></span>
             <ul>
-                <li><NavLink className={(path === '/' || path === '/home') ? "underline" : ""} to="/">Accueil</NavLink></li>
-                <li><NavLink className={(path === '/about') ? "underline" : ""} to="/about">À propos</NavLink></li>
+                <li><NavLink className={(path === '/' || path === '/home') ? "Underline" : ""} to="/">Accueil</NavLink></li>
+                <li><NavLink className={(path === '/about') ? "Underline" : ""} to="/about">À propos</NavLink></li>
             </ul>
         </header>
     )
